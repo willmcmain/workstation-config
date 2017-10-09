@@ -7,7 +7,6 @@ packages=(
     coreutils
     git
     gnu-sed
-    neovim
     python
     python3
     rename

@@ -18,3 +18,6 @@ run_all ./packages
 
 echo "Deploying .bashrc..."
 run_all ./bash
+
+echo "Deploying neovim..."
+run_all ./neovim

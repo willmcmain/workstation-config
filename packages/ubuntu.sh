@@ -5,7 +5,6 @@ packages=(
     build-essential
     curl
     git
-    neovim
     python
     python-dev
     python-pip
