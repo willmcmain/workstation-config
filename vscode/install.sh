@@ -23,7 +23,7 @@ fi
 if [ "$(uname -s)" == "Darwin" ]; then
     CONF_DIR="$HOME/Library/Application Support/Code/User"
 elif [ "$(uname -s)" == "Linux" ]; then
-    CONF_DIR="$HOME/.config/Code/User/settings.json"
+    CONF_DIR="$HOME/.config/Code/User"
 fi
 mkdir -p "$CONF_DIR"
 link_file "$CONF_DIR/settings.json" $DIR/settings.json
