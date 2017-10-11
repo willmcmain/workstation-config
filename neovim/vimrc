@@ -41,9 +41,11 @@ inoremap <silent> <Home> <C-o>g<Home>
 inoremap <silent> <End> <C-o>g<End>
 
 " save swapfiles in .vim directory instead of leaving them lying around
-set directory=~/.vim/swap//
-set backupdir=~/.vim/swap/backup//
-set undodir=~/.vim/swap/undo//
+if ! has('nvim')
+    set directory=~/.vim/swap//
+    set backupdir=~/.vim/swap/backup//
+    set undodir=~/.vim/swap/undo//
+endif
 
 " filetype options
 autocmd Filetype html* setlocal expandtab tabstop=2 shiftwidth=2
