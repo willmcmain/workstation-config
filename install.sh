@@ -21,3 +21,6 @@ run_all ./bash
 
 echo "Deploying neovim..."
 run_all ./neovim
+
+echo "Deploying VS Code..."
+run_all ./vscode

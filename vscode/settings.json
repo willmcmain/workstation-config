@@ -1,0 +1,21 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "editor.rulers": [
+        80
+    ],
+    "editor.fontSize": 13,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.pyc": true,
+        "**/*.pyo": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "python.pythonPath": "/usr/local/bin/python2.7",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false
+}

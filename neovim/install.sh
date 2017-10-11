@@ -1,9 +1,7 @@
 #! /bin/bash
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 source $DIR/../functions.sh
-
 
 if [ "$(uname -s)" == "Darwin" ]; then
     brew install neovim

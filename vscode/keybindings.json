@@ -1,0 +1,46 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "cmd+k cmd+left",
+        "command": "-workbench.action.focusPreviousGroup"
+    },
+    // It doesn't look like there's a when condition for panel focus, and 
+    // without a when this clobbers using escape to exit vim mode
+    /*{
+        "key": "escape",
+        "command": "workbench.action.closePanel",
+        "when": "panelFocus"
+    },*/
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        "key": "cmd+k cmd+right",
+        "command": "-workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    }
+]
