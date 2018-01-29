@@ -1,10 +1,10 @@
 {
-    "vim.disableAnnoyingNeovimMessage": true,
-    "workbench.colorTheme": "Tomorrow Night Blue",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.fontSize": 13,
     "editor.rulers": [
         80
     ],
-    "editor.fontSize": 13,
+    "extensions.ignoreRecommendations": false,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -14,8 +14,15 @@
         "**/*.pyc": true,
         "**/*.pyo": true
     },
-    "extensions.ignoreRecommendations": false,
     "python.pythonPath": "/usr/local/bin/python2.7",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.hlsearch": true,
+    "workbench.colorTheme": "Tomorrow Night Blue",
     "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "files.associations": {
+        "*.sls": "yaml",
+        "*.template": "mako"
+    },
+    "vim.foldfix": true
 }

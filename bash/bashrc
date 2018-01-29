@@ -10,3 +10,4 @@ source_all() {
 }
 
 source_all ~/.bashrc.d
+source ~/.git-completion.bash

@@ -10,21 +10,18 @@ shorten_path () {
     {if (length($0) > 35)
       {if (NF>4)
         print $1 "/" $2 "/.../" $(NF-1) "/" $NF;
-      else if (NF>3) 
-        print $1 "/" $2 "/.../" $NF; 
-      else 
-        print $1 "/.../" $NF; 
-    } else 
+      else if (NF>3)
+        print $1 "/" $2 "/.../" $NF;
+      else
+        print $1 "/.../" $NF;
+    } else
       print $0;}
   ')
   echo "${shortened}"
 }
 
-
-standard_prompt () {
-  echo "[${Color_IGreen}\u${Color_NoColor}@${Color_IWhite}${Color_On_Red}\h${Color_NoColor}] ${Color_Cyan}\w${Color_NoColor}"
-}
-
+USER_HOST="[${Color_IGreen}\u${Color_NoColor}@${Color_IWhite}${Color_On_Red}\h${Color_NoColor}]"
+STANDARD_PATH="${Color_Cyan}\w${Color_NoColor}"
 
 git_prompt () {
   local git_branch r s symbol
@@ -33,11 +30,11 @@ git_prompt () {
   r=$?
   if [ "$git_branch" = "fatal: ref HEAD is not a symbolic ref" ]; then 
     echo "${Color_Red}???${Color_NoColor} "
-  
+
   elif [ $r -eq 0 ]; then
     git_branch="${git_branch#refs/heads/}"
     s=`git status`
-    
+
     if grep -q "ahead of" <<<"$s"; then
       symbol="+"
     elif grep -q "behind" <<<"$s"; then
@@ -56,7 +53,7 @@ git_prompt () {
       git_branch="(${Color_Red}$git_branch${Color_NoColor})"
       index_symbol="!"
     fi
-    
+
     [ -n "$git_branch" ] && echo "${Color_BYellow}${symbol}${index_symbol}${Color_NoColor}${git_branch}"
   fi
 }
@@ -70,7 +67,8 @@ git_branch () {
 
 git_path () {
   toplevel="$(git rev-parse --show-toplevel)"
-  shortened=-$([ "$toplevel" != "$PWD" ] && shorten_path "${PWD#$toplevel}")
+  cwd=$(pwd -P)
+  shortened=-$([ "$toplevel" != "$cwd" ] && shorten_path "${cwd#$toplevel}")
   echo "${Color_Cyan}${shortened}${Color_NoColor}"
 }
 
@@ -84,9 +82,9 @@ set_prompt () {
   fi
 
   if [ -n "$gitstuff" ]; then
-    prompt="$(git_branch) $(git_prompt): $(git_path)"
+    prompt="$(git_branch) $(git_prompt)\n$USER_HOST $(git_path)"
   else
-    prompt="$(standard_prompt)"
+    prompt="$USER_HOST $STANDARD_PATH"
   fi
   export PS1="${venv}${prompt} \$ "
 }

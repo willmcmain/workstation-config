@@ -1,0 +1,8 @@
+[user]
+    email = willmcmain@gmail.com
+    name = Will McMain
+[push]
+    default = current
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
