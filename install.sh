@@ -23,6 +23,10 @@ echo "Deploying .bashrc..."
 run_all ./bash
 echo
 
+echo "Deploying git..."
+run_all ./git
+echo
+
 echo "Deploying neovim..."
 run_all ./neovim
 echo
