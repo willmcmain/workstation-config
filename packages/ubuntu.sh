@@ -11,7 +11,7 @@ packages=(
     python3
     python3-dev
     source-highlight
-    virtualenv
+    python-virtualenv
 )
 
 if [ "$(uname -s)" == "Linux" ]; then
