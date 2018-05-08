@@ -30,15 +30,6 @@ link_file "$CONF_DIR/settings.json" $DIR/settings.json
 link_file "$CONF_DIR/keybindings.json" $DIR/keybindings.json
 
 # Install extensions
-EXTENSIONS=(
-    JPTarquino.postgresql
-    donjayamanne.githistory
-    donjayamanne.python
-    emmanuelbeziat.vscode-great-icons
-    tushortz.python-extended-snippets
-    vscodevim.vim
-)
-
-for extension in "${EXTENSIONS[@]}"; do
+while read extension; do
     code --install-extension $extension
-done
+done <extensions
