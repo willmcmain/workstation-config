@@ -2,13 +2,12 @@
 
 set -e
 
-run_all() {
+run_install() {
     if [[ -d "$1" ]]; then
-        for script in "$1"/*; do
-            if [ -f $script -a -x $script ]; then
-                bash $script
-            fi
-        done
+        script="$1/install.sh"
+        if [ -f $script -a -x $script ]; then
+            bash $script
+        fi
     else
         echo "$1 is not a directory!" >&2
         return 1
@@ -16,20 +15,23 @@ run_all() {
 }
 
 echo "Installing packages..."
-run_all ./packages
+run_install ./packages
 echo
 
 echo "Deploying .bashrc..."
-run_all ./bash
+run_install ./bash
 echo
 
 echo "Deploying git..."
-run_all ./git
+run_install ./git
 echo
 
 echo "Deploying neovim..."
-run_all ./neovim
+run_install ./neovim
 echo
 
 echo "Deploying VS Code..."
-run_all ./vscode
+run_install ./vscode
+
+echo "Deploying Node..."
+run_install ./node

@@ -32,4 +32,4 @@ link_file "$CONF_DIR/keybindings.json" $DIR/keybindings.json
 # Install extensions
 while read extension; do
     code --install-extension $extension
-done <extensions
+done <$DIR/extensions
