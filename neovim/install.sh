@@ -7,7 +7,7 @@ if [ ! `command -v nvim` ]; then
     if [ "$(uname -s)" == "Darwin" ]; then
         brew install neovim
     elif [ "$(uname -s)" == "Linux" ]; then
-        sudo apt install neovim
+        sudo apt install neovim || sudo apt install vim
     fi
 fi
 
