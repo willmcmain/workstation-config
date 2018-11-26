@@ -70,10 +70,12 @@
 
     "workbench.colorCustomizations": {
         "editorWarning.foreground": "#dddd00"
+    
     },
-    "workbench.colorTheme": "Tomorrow Night Blue",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyCategorySeverity.error": "Information"
 }
