@@ -23,6 +23,7 @@
         "**/*.pyo": true
     },
     "git.confirmSync": false,
+    // Gitlens
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -45,9 +46,20 @@
     "gitlens.keymap": "alternate",
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
+    // Python
     "python.formatting.provider": "black",
+    "python.linting.enabled": true,
     "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": true,
     "python.linting.mypyCategorySeverity.error": "Information",
+    "python.linting.flake8CategorySeverity.E": "Warning",
+    "python.linting.flake8CategorySeverity.F": "Warning",
+    "python.linting.flake8CategorySeverity.W": "Warning",
+    "python.linting.flake8Args": [
+        "--ignore",
+        "E501 W503"
+    ],
+    // Vim
     "vim.foldfix": true,
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
