@@ -1,2 +1,5 @@
 .cache/
 .vscode/
+.venv/
+.pytest_cache/
+.mypy_cache/

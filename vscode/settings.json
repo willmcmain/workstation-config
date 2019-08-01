@@ -2,16 +2,15 @@
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.detectIndentation": false,
     "editor.fontSize": 13,
+    "editor.formatOnSave": true,
     "editor.renderWhitespace": "all",
     "editor.rulers": [
-        80
+        88
     ],
-
     "explorer.autoReveal": false,
     "extensions.ignoreRecommendations": false,
-
+    "explorer.confirmDelete": false,
     "files.associations": {
-        "*.sls": "yaml",
         "*.template": "mako"
     },
     "files.exclude": {
@@ -41,42 +40,22 @@
     "gitlens.blame.dateFormat": "YYYY-MM-DD",
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.scopes": [],
     "gitlens.codeLens.enabled": false,
-    "gitlens.historyExplorer.enabled": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.keymap": "alternate",
-
-    "python.pythonPath": "/usr/local/bin/python2.7",
-    "python.linting.pep8Enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.mypyEnabled": false,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true,
     "python.linting.mypyCategorySeverity.error": "Information",
-    "python.linting.pep8Args": [
-        "--ignore=E501, E121, E122, E123, E124, E125, E126, E127, E128"
-    ],
-    "python.linting.pep8CategorySeverity.E": "Warning",
-
-    "todohighlight.include": [
-        "**/*.js",
-        "**/*.jsx",
-        "**/*.html",
-        "**/*.css",
-        "**/*.py"
-    ],
-    "todohighlight.toggleURI": true,
-
-    "vim.cmdLineInitialColon": true,
-    "vim.disableAnnoyingNeovimMessage": true,
     "vim.foldfix": true,
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
-
     "workbench.colorCustomizations": {
         "editorWarning.foreground": "#dddd00"
     },
-    "workbench.colorTheme": "Kimbie Dark",
+    "workbench.colorTheme": "Monokai Dimmed",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.startupEditor": "newUntitledFile",
@@ -87,5 +66,5 @@
     },
     "[javascriptreact]": {
         "editor.tabSize": 2
-    }
+    },
 }
