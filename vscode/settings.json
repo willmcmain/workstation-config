@@ -151,5 +151,10 @@
 "editor.wordWrap": "off",
 "liveshare.connectionMode": "relay",
 "editor.acceptSuggestionOnCommitCharacter": false,
-"editor.acceptSuggestionOnEnter": "off"
+"editor.acceptSuggestionOnEnter": "off",
+"editor.autoClosingBrackets": "never",
+"editor.autoClosingDelete": "never",
+"editor.autoClosingOvertype": "never",
+"editor.autoClosingQuotes": "never",
+"editor.bracketPairColorization.enabled": true
 }
