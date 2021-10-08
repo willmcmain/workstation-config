@@ -6,4 +6,9 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
-	filemode = false
+    filemode = false
+[commit]
+    template = ~/.gitmessage
+
+[pull]
+	rebase = false
