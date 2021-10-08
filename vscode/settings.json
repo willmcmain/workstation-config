@@ -1,82 +1,155 @@
 {
-    "editor.acceptSuggestionOnEnter": "smart",
-    "editor.detectIndentation": false,
-    "editor.fontSize": 13,
-    "editor.formatOnSave": true,
-    "editor.renderWhitespace": "all",
-    "editor.rulers": [
-        88
-    ],
-    "explorer.autoReveal": false,
-    "extensions.ignoreRecommendations": false,
-    "explorer.confirmDelete": false,
-    "files.associations": {
-        "*.template": "mako"
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
     },
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/*.pyc": true,
-        "**/*.pyo": true
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
     },
-    "git.confirmSync": false,
-    // Gitlens
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
     },
-    "gitlens.blame.compact": false,
-    "gitlens.blame.highlight.enabled": false,
-    "gitlens.blame.avatars": false,
-    "gitlens.blame.format": "(${id}) ${author|15} ${date|-}",
-    "gitlens.blame.dateFormat": "YYYY-MM-DD",
-    "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.keymap": "alternate",
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
-    // Python
-    "python.formatting.provider": "black",
-    "python.linting.enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyCategorySeverity.error": "Information",
-    "python.linting.flake8CategorySeverity.E": "Warning",
-    "python.linting.flake8CategorySeverity.F": "Warning",
-    "python.linting.flake8CategorySeverity.W": "Warning",
-    "python.linting.flake8Args": [
-        "--ignore",
-        "E501 W503"
-    ],
-    // Vim
-    "vim.foldfix": true,
-    "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.visualstar": true,
-    "workbench.colorCustomizations": {
-        "editorWarning.foreground": "#dddd00"
+    {
+      "before": ["X"],
+      "after": ["\"", "_", "X"]
     },
-    "workbench.colorTheme": "Monokai Dimmed",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.labelFormat": "short",
-    "window.zoomLevel": 0,
-    "[javascript]": {
-        "editor.tabSize": 2
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
     },
-    "[javascriptreact]": {
-        "editor.tabSize": 2
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
     },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    }
+  ],
+  "editor.detectIndentation": false,
+  "editor.fontSize": 13,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [88],
+  "explorer.autoReveal": false,
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    "*.template": "mako"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.pyc": true,
+    "**/*.pyo": true,
+    "**/__pycache__": true
+  },
+  "git.confirmSync": false,
+  // Gitlens
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.blame.compact": false,
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.format": "(${id}) ${author|15} ${date|-}",
+  "gitlens.blame.dateFormat": "YYYY-MM-DD",
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.keymap": "alternate",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  // Python
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyCategorySeverity.error": "Information",
+  "python.linting.flake8CategorySeverity.E": "Warning",
+  "python.linting.flake8CategorySeverity.F": "Warning",
+  "python.linting.flake8CategorySeverity.W": "Warning",
+  "python.linting.flake8Args": ["--ignore", "E501 W503"],
+  // Vim
+  "vim.foldfix": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "workbench.colorCustomizations": {
+    "editorWarning.foreground": "#dddd00"
+  },
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.labelFormat": "short",
+  "window.zoomLevel": 0,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 2000,
+  "liveshare.featureSet": "stable",
+  "explorer.confirmDragAndDrop": false,
+  "editor.codeLens": false,
+"explorer.compactFolders": false,
+"editor.minimap.enabled": false,
+"workbench.editorAssociations": {
+	"*.ipynb": "jupyter.notebook.ipynb"
+},
+"editor.cursorStyle": "line",
+"editor.insertSpaces": true,
+"editor.lineNumbers": "on",
+"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+"editor.wordWrap": "off",
+"liveshare.connectionMode": "relay",
+"editor.acceptSuggestionOnCommitCharacter": false,
+"editor.acceptSuggestionOnEnter": "off"
 }
