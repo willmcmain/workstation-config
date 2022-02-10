@@ -1,3 +1,6 @@
+# This file just sources all the files in .bashrc.d
+# Don't add actual configuration here, add it to a script in .bashrc.d!
+# (And don't forget to make it -x)
 source_all() {
   if [[ -d "$1" ]]; then
     for script in "$1"/*; do
@@ -10,6 +13,3 @@ source_all() {
 }
 
 source_all ~/.bashrc.d
-source ~/.git-completion.bash
-
-alias doco=docker-compose

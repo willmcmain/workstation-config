@@ -30,8 +30,8 @@ echo "Deploying neovim..."
 run_install ./neovim
 echo
 
-echo "Deploying VS Code..."
-run_install ./vscode
+#echo "Deploying VS Code..."
+#run_install ./vscode
 
-echo "Deploying Node..."
-run_install ./node
+#echo "Deploying Node..."
+#run_install ./node

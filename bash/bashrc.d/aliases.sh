@@ -4,7 +4,7 @@ alias ls='ls --color'
 
 alias ll='ls -alh'
 alias la='ls -A'
-alias fuck='sudo !!'
+alias doco='docker compose'
 
 alias pytest3='python3 -m pytest'
 

@@ -14,16 +14,21 @@ apt_packages=(
 )
 
 osx_packages=(
+    awscli
     bash
-    bash-completion
     coreutils
     git
     gnu-sed
-    python
+    poetry
+    postgresql
     python3
     rename
-    source-highlight
+    ripgrep
     wget
+)
+
+osx_cask_packages=(
+    docker
 )
 
 if [ "$(uname -s)" == "Linux" ]; then
@@ -33,8 +38,11 @@ if [ "$(uname -s)" == "Linux" ]; then
 fi
 
 if [ "$(uname -s)" == "Darwin" ]; then
-    for package in "${packages[@]}"; do
+    for package in "${osx_packages[@]}"; do
         brew install $package
+    done
+    for package in "${osx_cask_packages[@]}"; do
+        brew install $package --cask
     done
 fi
 
