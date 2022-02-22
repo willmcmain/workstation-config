@@ -35,3 +35,9 @@ echo
 
 #echo "Deploying Node..."
 #run_install ./node
+
+if [ "$(uname -s)" == "Darwin" ]; then
+    echo "Deploying OSX fixes..."
+    run_install ./osx
+fi
+
