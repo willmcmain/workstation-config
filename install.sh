@@ -18,8 +18,12 @@ echo "Installing packages..."
 run_install ./packages
 echo
 
-echo "Deploying .bashrc..."
-run_install ./bash
+# echo "Deploying .bashrc..."
+# run_install ./bash
+# echo
+
+echo "Deploying fish..."
+run_install ./fish
 echo
 
 echo "Deploying git..."

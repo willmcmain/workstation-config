@@ -74,7 +74,7 @@ git_path () {
 
 
 set_prompt () {
-  gitstuff=$(git_prompt)
+  #gitstuff=$(git_prompt)
   if [ -n "$VIRTUAL_ENV" ]; then
     venv="${Color_Yellow}$(basename $VIRTUAL_ENV)${Color_NoColor} "
   else

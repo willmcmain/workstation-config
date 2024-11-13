@@ -3,6 +3,7 @@
 apt_packages=(
     build-essential
     curl
+    fish
     git
     python
     python-dev
@@ -14,21 +15,26 @@ apt_packages=(
 )
 
 osx_packages=(
-    awscli
-    bash
     coreutils
+    fish
     git
-    gnu-sed
+    httpie
+    jq
+    k9s
+    kubernetes-cli
     poetry
-    postgresql
     python3
     rename
     ripgrep
-    wget
+    tmux
+    nvm
+    pyenv
+    rustup
 )
 
 osx_cask_packages=(
     docker
+    google-cloud-sdk
 )
 
 if [ "$(uname -s)" == "Linux" ]; then
