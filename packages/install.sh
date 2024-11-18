@@ -22,14 +22,14 @@ osx_packages=(
     jq
     k9s
     kubernetes-cli
+    nvm
     poetry
+    pyenv
     python3
     rename
     ripgrep
-    tmux
-    nvm
-    pyenv
     rustup
+    tmux
 )
 
 osx_cask_packages=(
