@@ -22,6 +22,7 @@ osx_packages=(
     jq
     k9s
     kubernetes-cli
+    mdless
     nvm
     poetry
     pyenv
