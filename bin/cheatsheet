@@ -1,0 +1,55 @@
+#! /usr/bin/env fish
+
+set -l help "usage:
+    cheatsheet [OPTIONS] SHEET
+    cheatsheet --list/-l
+
+    --edit, -e
+        Open the sheet in edit mode. Will be created if it doesn't already exist
+    --list, -l
+        List all available cheatsheets
+    --help, -h
+        Print this message
+
+Cheatsheets!
+"
+set -l editor nvim
+set -l viewer mdless
+set -l cs_dir (realpath "$(status dirname)/../cheatsheets")
+
+argparse --name=cheatsheet 'e/edit' 'l/list' 'h/help' -- $argv
+or echo $help && return 1
+
+if set -q _flag_help
+    echo $help
+    and return
+end
+
+if set -q _flag_list
+    for file in $cs_dir/*.md
+        set -l sheet (string replace -r '\.md$' '' (basename $file))
+        echo $sheet
+    end
+    and return
+end
+
+if set -q argv[1]
+    set -l file "$cs_dir/$argv[1].md"
+    if set -q _flag_edit
+        $editor $file
+    else
+        if test -e $file
+            $viewer $file
+        else
+            echo "No cheatsheet $argv[1]!
+
+Run `cheatsheet --list` for a list of available cheatsheets
+or `cheatsheet -e $argv[1]` to create a new sheet"
+            and return 1
+        end
+    end
+else
+    echo "Specify a sheet"
+    echo $help
+    and return 2
+end
