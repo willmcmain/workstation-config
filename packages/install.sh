@@ -5,13 +5,10 @@ apt_packages=(
     curl
     fish
     git
-    python
-    python-dev
-    python-pip
-    python3
-    python3-dev
-    source-highlight
-    python-virtualenv
+    httpie
+    jq
+    ripgrep
+    tmux
 )
 
 osx_packages=(
@@ -23,13 +20,9 @@ osx_packages=(
     k9s
     kubernetes-cli
     mdless
-    nvm
     poetry
-    pyenv
-    python3
     rename
     ripgrep
-    rustup
     tmux
 )
 
@@ -38,12 +31,14 @@ osx_cask_packages=(
     google-cloud-sdk
 )
 
+# Linux packages
 if [ "$(uname -s)" == "Linux" ]; then
     for package in "${apt_packages[@]}"; do
         sudo apt install -y $package
     done
 fi
 
+# OSX Packages
 if [ "$(uname -s)" == "Darwin" ]; then
     for package in "${osx_packages[@]}"; do
         brew install $package
@@ -53,3 +48,8 @@ if [ "$(uname -s)" == "Darwin" ]; then
     done
 fi
 
+# Installers
+# pyenv
+curl https://pyenv.run | bash
+# rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
