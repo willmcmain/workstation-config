@@ -1,5 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CURL_CA_BUNDLE:/Users/will\x2emcmain/\x2econfig/netskope/nscacert_combined\x2epem
+SETUVAR --export --path HEX_CACERTS_PATH:/Users/will\x2emcmain/\x2econfig/netskope/nscacert_combined\x2epem
+SETUVAR --export NETSKOPE_CA_BUNDLE:/Users/will\x2emcmain/\x2econfig/netskope/nscacert_combined\x2epem
+SETUVAR --export NODE_EXTRA_CA_CERTS:/Users/will\x2emcmain/\x2econfig/netskope/nscacert_combined\x2epem
+SETUVAR --export REQUESTS_CA_BUNDLE:/Users/will\x2emcmain/\x2econfig/netskope/nscacert_combined\x2epem
+SETUVAR --export SSL_CERT_FILE:/Users/will\x2emcmain/\x2econfig/netskope/nscacert_combined\x2epem
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
