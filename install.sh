@@ -18,10 +18,6 @@ echo "Installing packages..."
 run_install ./packages
 echo
 
-# echo "Deploying .bashrc..."
-# run_install ./bash
-# echo
-
 echo "Deploying fish..."
 run_install ./fish
 echo
@@ -33,12 +29,6 @@ echo
 echo "Deploying neovim..."
 run_install ./neovim
 echo
-
-#echo "Deploying VS Code..."
-#run_install ./vscode
-
-#echo "Deploying Node..."
-#run_install ./node
 
 if [ "$(uname -s)" == "Darwin" ]; then
     echo "Deploying OSX fixes..."
